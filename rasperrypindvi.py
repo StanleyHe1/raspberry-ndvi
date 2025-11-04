@@ -9,7 +9,7 @@ import numpy as np
 import time
 import os
 from pathlib import Path
-#from picamera2 import Picamera2
+from picamera2 import Picamera2
 from matplotlib import pyplot as plt
 
 
@@ -211,9 +211,7 @@ def colorize_ndvi(ndvi, cmap_name='RdYlGn'):
 
 
 # 1. Capture both images
-#rgb_img, noir_img = capture_dual_images()
-rgb_img = cv2.imread("rgb_image.jpg")
-noir_img = cv2.imread("noir_image.jpg")
+rgb_img, noir_img = capture_dual_images()
 
 # 2. Calibration patch coordinates from the article
 patch_bboxes = [
